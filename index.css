@@ -1,0 +1,17 @@
+body{
+    background-color: brown;
+}
+btn{
+    background-color: white;
+    color: black;
+    width: 50%;
+}
+.order-list{
+    display: none;
+}
+.directions{
+    display: none;
+}
+.feedback{
+    display: none;
+}

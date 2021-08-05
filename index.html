@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <title>Form</title>
+
+<body>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-list">
+                <form class="form-group">
+                    <div class="form-group">
+                        <label for="Name">Your Name</label>
+                        <input type="text" class="form-control" id="name" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="select">What is the pest</label><br>
+                        <select class="browser-default form-select-md mb-4 name form-control" id="pest" required>
+                            <option value="">Pest</option>
+                            <option value="termites">termites</option>
+                            <option value="mice">mice</option>
+                            <option value="coackroaches">Coackroches</option>
+                            <option value="rats">rats</option>
+                            <option value="textile">texttile pests</option>
+                            <option value="bedbugs">bedbugs</option>
+                            <option value="ants">ants</option>
+                            <option value="flies">flies</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="select">Your Location</label><br>
+                        <select class="browser-default form-select-lg mb-4 name form-control" id="location" required>
+                            <option value="">location</option>
+                            <option value="nairobi">Nairobi</option>
+                            <option value="kitengela">Kitengela</option>
+                            <option value="utawala">Utawala</option>
+                            <option value="kasarani">Kasarani</option>
+                            <option value="kajiado">Kajiado</option>
+                            <option value="limuru">Limuru</option>
+
+                        </select>
+                    </div>
+
+
+                    <label for="number-of-rooms">Number of your rooms</label>
+                    <input type="number" id="numbers" class="form-control" min="1" required>
+
+                    <button type="button" class="btn " id="order" onclick="submitOrder()">Order</button><br>
+
+                </form>
+            </div>
+        </div>
+        <div class="col-md-8">
+
+            <div class="order-list">
+                <!-- table to display clients requests -->
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Number</th>
+                            <th scope="col">Pest type</th>
+                            <th scope="col">Location</th>
+                             <th scope="col">Total amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td class="no"></td>
+                            <td class="pname"></td>
+                            <td class="location"></td>
+                            <td class="total"></td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <button type="button" id="checkout" class="btn btn-lg">confirmRequest</button><br><br>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="directions">
+        <form>
+            <div class="form-group">
+                <label for="location">location</label>
+                <input type="text" class="form-control" id="place" required>
+
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone-Number</label>
+                <input type="number" class="form-control" id="phone" required min="1" placeholder="+2547******">
+            </div>
+           
+            <button type="button" class="btn" id="submit-details" onclick="confirmFumigation()">Submit</button><br><br>
+        </form>
+
+    </div>
+    <!-- feedback statement from pest control hq-->
+    <div class="feedback">
+        <p>Dear <span class="customer"></span></p>
+        <p>
+            <br> The Total cost of fumigation is Ksh. <span class="delivery-total"></span>
+            <br>You will be reached through <span class="phone-no"></span> as the number you
+            submitted.<br>
+            Thank you for choosing us!
+        </p>
+    </div><br>
+
+
+
+
+    </div>
+</body>
+<script src="./js/jquery-3.6.0.js"></script>
+<script src="./js/script.js"></script>
+
+</html>
